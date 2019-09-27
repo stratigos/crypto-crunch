@@ -202,6 +202,7 @@ DEPENDENCIES
   chromedriver-helper
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
+  nokogiri
   pg
   puma (~> 3.11)
   rails (= 5.2.3)
