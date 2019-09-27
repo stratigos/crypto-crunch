@@ -18,6 +18,8 @@ class ContrivedWorker
 
     page_title = doc.css("title").text
 
+    puts "Broadcasting that this worker did a thing: #{page_title}"
+
     worker_trace "Found: #{page_title}"
 
     ack!
