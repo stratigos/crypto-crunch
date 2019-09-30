@@ -1,6 +1,6 @@
 class ContrivedMessenger
   def initialize(
-    message: "contrived message!",
+    message: "contrived message for worker",
     route: "contrived_route_one",
     connection_client: Bunny.new
   )
