@@ -7,7 +7,7 @@ class ContrivedWorker
   include Sneakers::Worker
 
   from_queue(
-    :direct_messages,
+    :contrived_route_one,
     threads: 50,
     prefetch: 50,
     timeout_job_after: 1

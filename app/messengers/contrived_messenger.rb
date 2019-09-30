@@ -14,7 +14,7 @@ class ContrivedMessenger
     channel = connection.create_channel
     exchange = channel.direct("direct_messages")
 
-    exchange.publish(message, routing_key)
+    exchange.publish(message, routing_key: routing_key)
 
     puts("Broadcasting that publisher did a thing: #{message}:#{routing_key}")
 
