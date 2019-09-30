@@ -7,7 +7,6 @@ gem "rails", "5.2.3"
 
 gem "bootsnap", ">= 1.1.0", require: false
 gem "jbuilder", "~> 2.5"
-gem "nokogiri"
 gem "pg"
 gem "puma", "~> 3.11"
 gem "sass-rails", "~> 5.0"

@@ -1,5 +1,3 @@
-require "nokogiri"
-require "open-uri"
 require "sneakers"
 require "sneakers/metrics/logging_metrics"
 
@@ -14,13 +12,11 @@ class ContrivedWorker
   )
 
   def work(msg)
-    doc = Nokogiri::HTML(open(msg))
+    contrived_work = msg.tr("work", "👩‍🏭")
 
-    page_title = doc.css("title").text
+    puts("Broadcasting that this worker did a thing: #{contrived_work}")
 
-    puts("Broadcasting that this worker did a thing: #{page_title}")
-
-    worker_trace "Found: #{page_title}"
+    worker_trace "Found: #{contrived_work}"
 
     ack!
   end
