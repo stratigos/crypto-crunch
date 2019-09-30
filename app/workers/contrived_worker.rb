@@ -7,7 +7,7 @@ class ContrivedWorker
   include Sneakers::Worker
 
   from_queue(
-    :contrived_worker_stuff,
+    :direct_messages,
     threads: 50,
     prefetch: 50,
     timeout_job_after: 1
@@ -18,7 +18,7 @@ class ContrivedWorker
 
     page_title = doc.css("title").text
 
-    puts "Broadcasting that this worker did a thing: #{page_title}"
+    puts("Broadcasting that this worker did a thing: #{page_title}")
 
     worker_trace "Found: #{page_title}"
 
