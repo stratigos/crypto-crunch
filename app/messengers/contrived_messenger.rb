@@ -8,11 +8,11 @@ class ContrivedMessenger
   def run
     connection.start
     channel = connection.create_channel
-    exchange = channel.direct("direct_messages")
+    queue = channel.queue(routing_key, durable: true)
 
-    exchange.publish(message, routing_key: routing_key)
+    channel.default_exchange.publish(message, routing_key: queue.name)
 
-    puts("Broadcasting that publisher did a thing: #{message}:#{routing_key}")
+    puts("    💌 Publisher has published: #{message}:#{routing_key}")
 
     connection.close
   end
