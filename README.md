@@ -5,6 +5,12 @@ This is a toy application for learning the [`Sneakers` gem](https://github.com/j
 
 It will eventually consist of a few Rake tasks to publish or consume messages.
 
+## Setup
+
+Copy the sample environment config file:
+
+* :pen: `cp .sample.env .env`
+
 ## Example Use
 
 :building_construction: A Work in Progress
