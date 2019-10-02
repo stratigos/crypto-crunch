@@ -1,11 +1,8 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  host: ""
-  password: <%= ENV.fetch("CRYPTOCRUNCH_DB_PASS") { "" } %>
   pool: <%= ENV.fetch("CRYPTOCRUNCH_MAX_THREADS") { 5 } %>
   timeout: 5000
-  username: <%= ENV.fetch("CRYPTOCRUNCH_DB_USER") { "postgres" } %>
 
 development:
   <<: *default
@@ -18,7 +15,7 @@ test:
 production:
   adapter: postgresql
   database: <%= ENV["CRYPTOCRUNCH_DB_NAME"] %>
-  encoding: unicode  
+  encoding: unicode
   host: <%= ENV["CRYPTOCRUNCH_DB_HOSTNAME"] %>
   password: <%= ENV["CRYPTOCRUNCH_DB_PASSWORD"] %>
   port: <%= ENV["CRYPTOCRUNCH_DB_PORT"] %>
