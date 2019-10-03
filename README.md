@@ -21,4 +21,4 @@ Copy the sample environment config file:
 
 ### Consume Messages
 
-:desktop_computer: `WORKERS=ContrivedWorker ./bin/rails sneakers:run`
+:desktop_computer: (`heroku run`) `WORKERS=ContrivedWorker ./bin/rails sneakers:run`
