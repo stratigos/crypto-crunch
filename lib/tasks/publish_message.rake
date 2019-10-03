@@ -4,7 +4,7 @@ namespace :publish do
   task :message, [:msg, :route] => [:environment] do |_task, args|
     message = args[:msg] || "contrived message for worker"
     route = args[:route] || "contrived_route_one"
-    bunny = Bunny.new
+    bunny = Bunny.new(ENV["CLOUDAMQP_URL"])
 
     puts "📯 Preparing to send a message: #{message}"
 

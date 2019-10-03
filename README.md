@@ -5,6 +5,12 @@ This is a toy application for learning the [`Sneakers` gem](https://github.com/j
 
 It will eventually consist of a few Rake tasks to publish or consume messages.
 
+## Setup
+
+Copy the sample environment config file:
+
+* :pen: `cp .sample.env .env`
+
 ## Example Use
 
 :building_construction: A Work in Progress
@@ -15,4 +21,4 @@ It will eventually consist of a few Rake tasks to publish or consume messages.
 
 ### Consume Messages
 
-:desktop_computer: `WORKERS=ContrivedWorker ./bin/rails sneakers:run`
+:desktop_computer: (`heroku run`) `WORKERS=ContrivedWorker ./bin/rails sneakers:run`

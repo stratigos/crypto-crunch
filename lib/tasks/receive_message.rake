@@ -4,7 +4,7 @@ require "bunny"
 namespace :consume do
   desc "Consume a Message via Bunny - to test alongside Sneakers"
   task message: :environment do
-    connection = Bunny.new
+    connection = Bunny.new(ENV["CLOUDAMQP_URL"])
     connection.start
 
     channel = connection.create_channel
