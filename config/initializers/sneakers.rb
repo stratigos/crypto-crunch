@@ -5,8 +5,7 @@ Sneakers.configure(
   # connection: Bunny.new,
   exchange: "sneakers",
   exchange_type: :direct,
-  heartbeat: 30,
-  vhost: "/"
+  heartbeat: 30
 )
 
 Sneakers.logger.level = Logger::INFO

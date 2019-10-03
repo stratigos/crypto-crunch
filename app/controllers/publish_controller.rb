@@ -2,9 +2,12 @@ class PublishController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def publish
+    bunny = Bunny.new(ENV["CLOUDAMQP_URL"])
+
     publisher_service = PublishMessage.new(
       message: message_from_body,
-      route: queue_routing_key
+      route: queue_routing_key,
+      connection_client: bunny
     )
     publisher_service.run
 
